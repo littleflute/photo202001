@@ -1,0 +1,122 @@
+<!DOCTYPE html>	  
+<html>  
+<body> 
+<script src="https://www.w3schools.com/lib/w3.js"></script>				
+<script src="https://littleflute.github.io/JavaScript/blclass.js"></script>		
+<script src="https://littleflute.github.io/JavaScript/blApp1.js"></script>		
+<div id="id_div_mp4i_bat_info" >								
+<a target="_blank" href="https://github.com/littleflute/ted1/edit/master/docs/61/mp4i.bat">v1.3. 112 * </a>	
+<a href="..">[..]</a> <button id="id_btn_4_blApp" style="float:right;">+blApp</button>	
+</div>						 
+<div id="DivCurTime"></div> 			
+<br>  
+<div id="DivButtons"> 				
+<button onclick="play('VID_20200117_152355.mp4')">1:VID_20200117_152355.mp4</button> 
+<div id="DivButtons"> 				
+<div id="DivButtons"> 				
+ </div> 			
+<br> 	
+<div id="id_div_4_gif" style="border:1px solid green;" >				
+</div> 									
+<br> 	
+<div id="id_div_4_jpg" style="border:1px solid blue;" >				
+IMG_20200117_151758.jpg, 
+IMG_20200117_151916.jpg, 
+IMG_20200117_152024.jpg, 
+IMG_20200117_152041.jpg, 
+IMG_20200117_152221.jpg, 
+IMG_20200117_152237.jpg, 
+IMG_20200117_152302.jpg, 
+IMG_20200117_152311.jpg, 
+IMG_20200117_152321.jpg, 
+IMG_20200122_155815.jpg, 
+IMG_20200122_155827.jpg, 
+IMG_20200122_155831.jpg, 
+IMG_20200122_155853.jpg, 
+IMG_20200123_072654.jpg, 
+IMG_20200124_151217.jpg, 
+IMG_20200124_152218.jpg, 
+IMG_20200124_182452.jpg, 
+IMG_20200124_182518.jpg, 
+IMG_20200124_182650.jpg, 
+IMG_20200124_183630.jpg, 
+IMG_20200124_184436.jpg, 
+IMG_20200124_192903.jpg, 
+IMG_20200124_192917.jpg, 
+IMG_20200124_200855.jpg, 
+IMG_20200124_201229.jpg, 
+IMG_20200124_201620.jpg, 
+IMG_20200125_091637.jpg, 
+IMG_20200125_091808.jpg, 
+IMG_20200125_092625.jpg, 
+IMG_20200125_092859.jpg, 
+IMG_20200125_092909.jpg, 
+IMG_20200125_094249.jpg, 
+IMG_20200125_094321.jpg, 
+IMG_20200125_095651.jpg, 
+IMG_20200125_095657.jpg, 
+IMG_20200125_101045.jpg, 
+IMG_20200125_101253.jpg, 
+IMG_20200125_101335.jpg, 
+IMG_20200125_142438.jpg, 
+IMG_20200125_142443.jpg, 
+IMG_20200125_142452.jpg, 
+IMG_20200125_142533.jpg, 
+IMG_20200125_142607.jpg, 
+IMG_20200125_144055.jpg, 
+IMG_20200125_144229.jpg, 
+IMG_20200125_153407.jpg, 
+IMG_20200125_153446.jpg, 
+IMG_20200125_153449.jpg, 
+IMG_20200125_153452.jpg, 
+IMG_20200125_153455.jpg, 
+IMG_20200125_153600.jpg, 
+IMG_20200125_153606.jpg, 
+IMG_20200125_154206.jpg, 
+IMG_20200125_154422.jpg, 
+IMG_20200125_154553.jpg, 
+IMG_20200125_154722.jpg, 
+IMG_20200125_154744.jpg, 
+IMG_20200125_154839.jpg, 
+</div> 									
+<br> 	
+<div id="id_div_4_png" style="border:1px solid blue;" >				
+</div> 								 
+<br> 	
+<div id="id_div_4_lrcJS" style="border:1px solid red;display: none;" >		
+</div> 								
+<script>  
+var s = '::<div id="id_4_plxTool"> </div>';				
+var str4V = '<video id="myVideo" width="720" height="480" controls> ';				
+str4V += '<source src="v1.mp4" type="video/mp4">Your browser does not support HTML5 video.'; 	
+str4V += '</video>';  										
+var md4v = blo0.blMD( "id_mdiv_4_myVideo" , s , 300,100,720,480,blColor[1]); 	
+  md4v.v = blo0.blDiv(md4v, md4v.id+"v" , str4V , blGrey[1]); 	
+var vid = document.getElementById("myVideo"); 
+function play(i) {
+    vid.src=i; 
+    vid.load();
+    vid.play(); 
+}
+function getCurTime() {  
+   document.getElementById("DivCurTime").innerHTML= vid.currentTime; 
+}   
+function setCurTime(t) { 
+   vid.currentTime=t;  
+   getCurTime();
+}  
+function moveMS(ms) { 
+  vid.currentTime+=ms;
+  getCurTime();  
+}   
+var btnPlx = blo0.blBtn(bl$("id_4_plxTool"),"id_btn_Plx","+plx",blGrey[0]);  
+btnPlx.onclick = function() { 
+  if(btnPlx.Load){													
+ 	if(btnPlx.n){}													
+ 	else{btnPlx.n=true;_on_off_div(this,bl$("id_mdiv_plx"));}		
+   _on_off_div(this,bl$("id_mdiv_plx"));  							
+  }																
+  else  { blo0.blScript ("id_script_plx","plx.js"); btnPlx.Load=true;	}
+}   
+</script> 
+</body> 
